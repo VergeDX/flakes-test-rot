@@ -42,7 +42,7 @@
 
   fileSystems."/etc/nixos" =
     {
-      device = "/persistent/persistent/Projects/flakes";
+      device = "/persistent/Projects/flakes";
       fsType = "none";
       options = [ "bind" ];
     };
