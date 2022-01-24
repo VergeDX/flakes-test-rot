@@ -26,8 +26,6 @@
   # replicates the default behaviour.
   networking.useDHCP = false;
   networking.interfaces.enp3s0f1.useDHCP = true;
-  networking.interfaces.vboxnet0.useDHCP = true;
-  networking.interfaces.virbr0.useDHCP = true;
   networking.interfaces.wlp0s20f3.useDHCP = true;
 
   # Configure network proxy if necessary
