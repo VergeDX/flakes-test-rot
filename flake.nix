@@ -10,7 +10,7 @@
 
   outputs = { ... }@inputs: inputs.flake-utils.lib.eachDefaultSystem (system: {
     packages.nixosConfigurations."NixOS-RoT" = inputs.nixos.lib.nixosSystem {
-      inherit system;
+      inherit system; specialArgs = { inherit inputs; };
       modules = with inputs; [ ./configuration.nix ] ++
         [ home-manager.nixosModules.home-manager ] ++
         [{ home-manager.users."vanilla" = import ./home.nix; }];
